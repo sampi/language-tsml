@@ -1,6 +1,6 @@
 {
   "name": "language-tsml",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "TSML for Atom",
   "repository": "https://github.com/sampi/language-tsml",
   "license": "MIT",

@@ -1,8 +1,9 @@
-'name': 'EDBML 1.0'
-'comment': 'EDBML Syntax: version 1.0'
+'name': 'TSML 1.0'
+'comment': 'TSML Syntax: version 1.0'
 'scopeName': 'source.js.edbml'
 'fileTypes': [
-  'edbml'
+  'edbml',
+  'tsml'
 ]
 'foldingStartMarker': '(?x)^\n\t\t\t#   Yes *+      Open  (         Blank |Comments                                        | (No Paren | String) | String                                                        | (Nested Parens             )  )*+\n\t\t\t(?> \\g<yesS>*+  \\[    (?<yesS>  (?!.) |//.*+|/\\*((?!\\*/).)++(\\*/|$)|(^)((?!/\\*).)*(\\*/)| (?<noS>[^\\[\\]\'"/]) | (?<str> \'(\\\\\'|[^\'])*+\' | "(\\\\"|[^"])*+" | /(\\\\/|[^/])*+/) | (?<squar> \\[ \\g<yesS>*+ \\] )  )*+\n\t\t\t|   \\g<yesR>*+  \\(    (?<yesR>  (?!.) |//.*+|/\\*((?!\\*/).)++(\\*/|$)|(^)((?!/\\*).)*(\\*/)| (?<noR>[^\\(\\)\'"/]) | \\g<str>                                                       | (?<round> \\( \\g<yesR>*+ \\) )  )*+\n\t\t\t|   \\g<yesC>*+  \\{    (?<yesC>  (?!.) |//.*+|/\\*((?!\\*/).)++(\\*/|$)|(^)((?!/\\*).)*(\\*/)| (?<noC>[^\\{\\}\'"/]) | \\g<str>                                                       | (?<curly> \\{ \\g<yesC>*+ \\} )  )*+\n\t\t)$'
 'foldingStopMarker': '(?x)^\n\t\t\t#                     (         Blank |Comments                                        | (No Paren | String) | String                                                        | (Nested Parens             )  )*+  Close  Yes *+\n\t\t\t(?>                   (?<yesS>  (?!.) |//.*+|/\\*((?!\\*/).)++(\\*/|$)|(^)((?!/\\*).)*(\\*/)| (?<noS>[^\\[\\]\'"/]) | (?<str> \'(\\\\\'|[^\'])*+\' | "(\\\\"|[^"])*+" | /(\\\\/|[^/])*+/) | (?<squar> \\[ \\g<yesS>*+ \\] )  )*+  \\]     \\g<yesS>*+\n\t\t\t|                     (?<yesR>  (?!.) |//.*+|/\\*((?!\\*/).)++(\\*/|$)|(^)((?!/\\*).)*(\\*/)| (?<noR>[^\\(\\)\'"/]) | \\g<str>                                                       | (?<round> \\( \\g<yesR>*+ \\) )  )*+  \\)     \\g<yesR>*+\n\t\t\t|                     (?<yesC>  (?!.) |//.*+|/\\*((?!\\*/).)++(\\*/|$)|(^)((?!/\\*).)*(\\*/)| (?<noC>[^\\{\\}\'"/]) | \\g<str>                                                       | (?<curly> \\{ \\g<yesC>*+ \\} )  )*+  \\}     \\g<yesC>*+\n\t\t)$'
